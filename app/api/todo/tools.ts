@@ -13,6 +13,7 @@ const getUserDataDef = toolDefinition({
       ),
   }),
   outputSchema: z.object({
+    id: z.number(),
     name: z.string(),
     email: z.string(),
     phone: z.string(),
@@ -42,6 +43,7 @@ const getUserData = getUserDataDef.server(async ({ name }) => {
   );
   console.log(user);
   return {
+    id: user.id,
     name: user.name,
     email: user.email,
     phone: user.phone,
@@ -61,19 +63,19 @@ const searchTodosDef = toolDefinition({
 
 If a userId is directly provided in the request:
 - Use the provided userId as a query parameter.
-- Call the todos tool with this userId.
+- Call the todos tool with this userId(i.e user's id).
 - Return the todos related to that userId.
 
 If the userId is NOT directly provided:
-- First, call the getUserData tool to fetch user information.
-- Extract the userId from the returned user data.
-- Use that userId as a query parameter.
-- Call the todos tool with the extracted userId.
+- First, call the get_user_data tool to fetch user information.
+- Extract the id from the returned user data.
+- Use that id as a query parameter for userId.
+- Call the seach_todo tool with the extracted user's id(id).
 - Return the todos related to that user.
 
 Important rules:
-- Always ensure the todos returned belong to the identified userId.
-- Do not return todos without a valid userId.
+- Always ensure the todos returned belong to the identified user's id.
+- Do not return todos without a valid user's  id.
 - Do not assume a userId without fetching or receiving it.
 `
     ),
