@@ -1,3 +1,117 @@
+# TanStack AI Demo Project
+
+This project is a small demo that shows how to use **TanStack** tools together with **TanStack AI (Alpha)** to build a simple AI-powered chat and to work with external APIs.
+
+---
+
+## What this project does
+
+- Uses **two public APIs**:
+
+  - One API to fetch **users**
+  - One API to fetch **todos for a selected user**
+
+- Implements a **simple AI chat** using **TanStack AI (Alpha)**
+- Shows how AI tools/functions can be used to interact with application data
+
+A sample response/output can be seen in the UI (see screenshot below):
+
+![Project screenshot](public/response.png)
+
+---
+
+## AI Chat (TanStack AI)
+
+This project includes a basic AI chat built with the **TanStack AI library (Alpha)**. The chat demonstrates:
+
+- Sending messages to an LLM
+- Receiving streamed responses
+- Using tools/functions to fetch and return real application data
+- Type-safe handling of messages and tools
+
+---
+
+## What is TanStack?
+
+**TanStack** is a collection of high-quality, framework-agnostic libraries that help developers solve common problems such as:
+
+- Data fetching
+- State management
+- Tables
+- Routing
+- And now, **AI integration**
+
+---
+
+## TanStack AI (Overview)
+
+**TanStack AI** is an experimental (Alpha) library that helps you integrate Large Language Models (LLMs) into your app in a clean and type-safe way.
+
+---
+
+## TanStack AI Packages
+
+### Core Packages
+
+#### `@tanstack/ai`
+
+The core AI library. It provides:
+
+- A common adapter interface for different LLM providers
+- Chat completion and streaming support
+- Tool/function calling system that works on server and client
+- Agent loop strategies
+- Support for different content types (text, image, audio, video, documents) based on model capabilities
+
+---
+
+#### `@tanstack/ai-client`
+
+---
+
+#### `@tanstack/ai-react`
+
+---
+
+#### `@tanstack/ai-solid`
+
+---
+
+## Adapters (LLM Providers)
+
+Adapters allow TanStack AI to connect to different AI providers. Currently supported adapters include:
+
+- `@tanstack/ai-openai`
+
+  - OpenAI models like GPT-4, GPT-3.5, etc.
+
+- `@tanstack/ai-anthropic`
+
+  - Anthropic Claude models
+
+- `@tanstack/ai-gemini`
+
+  - Google Gemini models
+
+- `@tanstack/ai-ollama`
+
+  - Ollama for running local models
+
+[More about packages](https://tanstack.com/ai/latest/docs/getting-started/overview#core-packages)
+
+---
+
+## Summary
+
+- Fetches users and todos using APIs
+- Uses TanStack tools for clean data handling
+- Implements a simple AI chat with TanStack AI
+- Demonstrates adapters, tools, and type safety
+
+---
+
+# Let's run
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
